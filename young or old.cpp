@@ -5,8 +5,9 @@ class Person{
     public:
         int age;
         Person(int initialAge);
-        void amIOld();
-        void yearPasses();
+		void amIOld();
+		void yearPasses();
+        
     };
 
     Person::Person(int initialAge){
@@ -38,7 +39,7 @@ class Person{
 
     void Person::yearPasses(){
         // Increment the age of the person in here
-        age=age+3;
+        age=age+1;
     }
 
 int main(){
