@@ -5,7 +5,6 @@ using namespace std;
 int main(){
 	int counter=1;
 	int m , n;
-	
 	cout<<"first enter the row and second enter the column : ";
 	cin>>m,n;
 	int a[m][n];
@@ -27,6 +26,7 @@ int main(){
 			}
 		}
 		else{
+			//for odd bottom up approch
 			for(int row=m-1;row>=0;row--){
 				cout<<a[row][col]<<" ";
 			}
