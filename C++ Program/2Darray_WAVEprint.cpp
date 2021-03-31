@@ -3,35 +3,35 @@
 using namespace std;
 
 int main(){
-	int counter=1;
+	int val=1;
 	int m , n;
+	
 	cout<<"first enter the row and second enter the column : ";
-	cin>>m,n;
-	int a[m][n];
+	cin>>m>>n;
+	int arr[m][n];
 	//for display the array
-		for(int row =0;row<=m-1;row++){
-		    for(int col=0;col<=n-1;col++){
-				a[row][col]=counter;
-				counter=counter+1;
-				cout<<a[row][col]<<" ";
+		for(int row =0;row<m;row++){
+		    for(int col=0;col<n;col++){
+				arr[row][col]=val;
+				val= val+1;
+				cout<<arr[row][col]<<" ";
 			}
-		cout<<endl;
-		}
-	//wave print
-	for (int col=0;col<n;col++){
-		//for even top-down approch
-		if(col%2==0){
-			for(int row=0;row<m;row++){
-				cout<<a[row][col];
-			}
-		}
-		else{
-			//for odd bottom up approch
-			for(int row=m-1;row>=0;row--){
-				cout<<a[row][col]<<" ";
-			}
+			cout<<endl;
 		}
 		
-	}
-	return 0;
+		for(int i=0;i<m;i++){
+			if(i%2==0){
+				for(int j=0;j<n;j++){
+					cout<<arr[i][j]<<" ";
+				}
+				cout<<endl;
+			}
+			else{
+				for(int j=n;j>0;j--){
+					cout<<arr[j][i]<<" ";
+				}
+				cout<<endl;
+			}
+		}
+		return 0;
 }

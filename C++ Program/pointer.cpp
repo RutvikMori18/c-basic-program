@@ -1,17 +1,16 @@
 #include<iostream>
-
 using namespace std;
-
 int main(){
-			 //enter the code
-			int a= 7;
-			int* b= &a;
-			cout<<b<<endl;
-			cout <<*b<<endl; 
-			int** c=&b;
-			cout<<"the value at c is "<<c<<endl;
-			cout<<"the address of b is "<<*c<<endl;
-			cout<<"the value of a is "<<**c<<endl;
-			 return 0;
-	 }
-
+	int x=10;
+	cout<<x<<endl;
+	cout<<"x address in symbol table is "<<&x<<endl;
+	
+	int* ptr=0;//must be intialize with zero because of garbage value
+	cout<<ptr<<endl;
+	
+	char b = 'A';
+	char* ptrb=&b;
+	cout<<ptrb<<endl;//char by default charater print
+	cout<<&b<<endl;
+	//we can reassign the address of pointer
+}

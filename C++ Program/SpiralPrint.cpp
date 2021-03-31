@@ -2,48 +2,50 @@
 #include<cstring>
 using namespace std;
 
-void spiralPrint(int a[][],int m,int n){
-	int strtrow=0;
-	int strtcol=0;
-	int endrow=m-1;
-	int endcol=n-1;
-	//print it
-	while(strtrow<endrow and strtcol<endcol){
-		
-		//firsst row
-		for(int i = 0;i<endcol; i++){
-			cout<<a[strtrow][i]<<" ";
+void spiralPrint(int a[][100] , int m, int n){
+	int left=0;
+	int top=0;
+	int bottom=m-1;
+	int right=n-1;
+	
+	while(left<=right || top<=bottom){
+		//print left to right row
+		for(int i=left;i<=right;i++){
+			cout<<a[top][i]<<" ,";
 		}
-		strtrow++;
+		top=top+1;
 		
-		for(int i=strtrow; i<endcol; i++){
-			cout<<a[i][endcol]<<" ";
+		//print top to bottom right column
+		for(int i=top;i<=bottom;i++){
+			cout<<a[i][right]<<" ,";
 		}
-		endcol--;
+		right=right-1;
 		
-		//Bottom row
-		for(int i=endcol;i>=strtcol;i--){
-			cout<<a[endrow][i]<<" ";
+		//print right to left row
+		for(int i=right;i>=left;i--){
+			cout<<a[bottom][i]<<" ,";
 		}
-		endrow--;
+		bottom=bottom-1;
 		
-		//strt col
-		for(int i=endrow;i>=strtrow;i--){
-			cout<<a[i][strtcol];
+		//print bottom to top left
+		for(int i=bottom;i>=top;i--){
+			cout<<a[i][left]<<" ,";
 		}
-		strtcol++;
+		left=left+1;
 	}
 }
+	
 int main(){
 		
 		int m,n;
 		cin>>m>>n;
-		int a[m][n];
-		int val=0;
+		int a[100][100];
+		int val=1;
 		for(int i=0;i<m;i++){
 			for(int j=0;j<n;j++){
 				//print the array
 				a[i][j]=val;
+				val++;
 				cout<<a[i][j]<<" ";
 			}
 			cout<<endl;

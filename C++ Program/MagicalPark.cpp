@@ -16,7 +16,7 @@ void magicalPark(char a[][100],int m,int n,int k,int s){
 			if(ch=='*'){
 				s +=5;
 			}
-			elseif(ch=='.'){
+			else if(ch=='.'){
 				s -=2;
 			}
 			else{
