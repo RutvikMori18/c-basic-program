@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-	int n1,n2,max,mul1,mul2;
+	int n1,n2,max,mul1=0,mul2=0;
 	cout<<"enter the number:";
 	cin>>n1>>n2;
 	max=(n1>n2)? n1:n2;
